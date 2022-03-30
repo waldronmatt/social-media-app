@@ -1,0 +1,510 @@
+﻿/* Shared Styling ***********************************************************/
+
+.spotify-grid, .spotify-tracks-grid, .instagram-grid, .youtube-grid, .twitter-grid, .etsy-grid {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 1.4em 0 .7em 0;
+    justify-content: center;
+}
+
+/* grid item for twitter, spotify, instagram */
+.grid_item {
+	background-size: cover;
+	display: inline-block;
+	-moz-transform: translate3d(0, 0, 0);
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+	-moz-transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+	-webkit-transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+	transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.grid_item a {
+    transition: all 1.25s;
+}
+
+/* grid link for spotify and instagram */
+.grid_link, .etsy-link {
+	display: block;
+	color: #000;
+    cursor: pointer;
+    -webkit-transition: 1.25s all;
+    -moz-transition: 1.25s all;
+    transition: 1.25s all;
+}
+
+.grid_link:hover {
+	background-color: rgba(0,0,0,.5);
+	-webkit-transition: ease-in-out .5s; /* Safari */
+	transition: ease-in-out .5s;
+}
+
+/* buttons for twitter, spotify, instagram */
+div.social-link, div.social-link .list {
+    position: relative;
+	line-height: 30px;	    
+}
+
+div.social-link .list a {
+    display: block;
+    font-size: 1.25em;
+    padding: .3em .6em .3em .6em;   
+}
+
+div.social-link .list a { 
+	font-family: 'Tajawal', sans-serif;
+	margin: .7em;
+	text-align: center;
+	background-color: #fff;
+	text-decoration: none;
+	border: solid .2em;
+	border-color: #333a56; 
+	height: 100%;
+    cursor: pointer;
+	-webkit-transition: all .25s ease;
+	-moz-transition: all .25s ease;
+	-ms-transition: all .25s ease;
+	-o-transition: all .25s ease;
+	transition: all .25s ease;
+}
+
+div.social-link .list a:hover { 
+	color: #fff;
+	background-color: #333a56;
+}
+
+/* Media Queries ***********************************************************/
+
+@media all and (max-width: 320px) {
+	.span, .spotify-span, .etsy-span {
+		width: 100%;
+	}
+	  
+	.span .grid_link, .spotify-span .grid_link, .etsy-link  {
+		padding-bottom: 100%;
+	}
+	
+    .one-center {
+		width: 100%;
+	}
+	
+	.youtube-grid > div {
+        width: 100%;
+    }
+    
+    .twitter-grid > div {
+        width: 100%;
+    }
+}
+	
+@media all and (min-width: 321px) and (max-width: 479px) {
+   	.span, .spotify-span {
+		width: 50%;
+	}
+	
+	.span .grid_link, .spotify-span .grid_link, .etsy-link  {
+		padding-bottom: 100%;
+	}
+		
+	.one-center {
+		width: 100%;
+	}
+	
+	.youtube-grid > div {
+        width: 100%;
+    }
+    
+    .twitter-grid > div, .etsy-span {
+        width: 100%;
+    }
+}
+	
+@media all and (min-width: 480px) and (max-width: 767px) {
+	.span {
+		width: 33.3%;
+	}
+	
+	.spotify-span, .etsy-span {
+        width: 50%
+    }
+
+	.span .grid_link, .spotify-span .grid_link, .etsy-link  {
+		padding-top: 50%;
+		padding-bottom: 50%;
+	}
+
+	.two-center {
+		margin: auto;
+		width: 50%;
+	}
+	
+	.one-center {
+		margin: auto;
+		width: 66.7%;
+	}
+	
+	.youtube-grid > div {
+        width: 50%;
+    }
+    
+    .twitter-grid > div {
+        width: 100%;
+    }
+}
+	  
+@media all and (min-width: 768px) and (max-width: 1439px){
+	.span, .spotify-span, .etsy-span {
+		width: 33.3%;
+	}
+	
+	.span .grid_link, .spotify-span .grid_link, .etsy-link {
+        padding-top: 50%;
+		padding-bottom: 50%;
+	}
+
+	.two-center {
+		margin: auto;
+		width: 50%;
+	}
+	
+	.one-center {
+		margin: auto;
+		width: 50%;
+	}
+	
+	.one-center .grid_link {
+		padding-bottom: 80%;
+	}
+	
+    .youtube-grid > div {
+        width: 50%;
+    }
+    
+    .twitter-grid > div {
+        width: 50%;
+    }
+    
+    .twitter-text {
+        height: 120px;
+    }
+}
+
+@media all and (min-width: 1440px) {
+	.span, .spotify-span, .etsy-span {
+		width: 25%;
+	}
+		
+	.span .grid_link, .spotify-span .grid_link, .etsy-link {
+		padding-top: 50%;
+		padding-bottom: 50%;
+	}
+	
+	.three-center {
+		margin-left: 12.5%;
+		margin-right: -12.5%;
+		width: 25%;
+	}
+
+	.two-center {
+		margin-left: 16.7%;
+		margin-right: -16.7%;
+		width: 33.3%;
+	}
+		
+	.one-center {
+		margin: auto;
+		width: 33.3%;
+	}
+		
+	.one-center .grid_link {
+		padding-top: 50%;
+		padding-bottom: 50%;
+	}
+	
+	.youtube-grid > div {
+        width: 33.3%;
+    }
+    
+    .twitter-grid > div {
+        width: 33.3%;
+    }
+    
+    .twitter-text {
+        height: 120px;
+    }
+}
+
+/* Twitter Styling ***********************************************************/
+
+.twitter-text {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+.twitter-tile, .twitter-cont {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Spotify Styling ***********************************************************/
+
+.audio-player {
+    position: inherit;
+    width: 100%;
+    height: 0;
+    text-align: center;
+}
+
+.audio-player:focus .audio-player__title, .audio-player:hover .audio-player__title, .audio-player.is-playing .audio-player__title {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+}
+
+.audio-player.is-playing .audio-player__control-icon:before {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+}
+.audio-player.is-playing .audio-player__control-icon:after {
+    -webkit-transform: translateY(50px);
+    transform: translateY(50px);
+}
+.audio-player__cover {
+  position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: opacity 350ms;
+    will-change: opacity;
+}
+
+.audio-player__control {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.audio-player__control:focus {
+    outline: none;
+    transition: ease-in-out .5s;
+    -webkit-transition: ease-in-out .5s; /* Safari */  
+}
+
+.audio-player__control-icon, .play {
+    position: absolute;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    overflow: hidden;
+    transition: all 250ms ease-out;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    will-change: transform;
+    background-color: #000;
+    cursor: pointer;
+}
+
+.audio-player__control-icon::after, .audio-player__control-icon::before, .play::after {
+    transition: all 200ms;
+    will-change: transform;
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.audio-player__control-icon::after, .play::after {
+    left: 5px;
+    width: 0;
+    height: 0;
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+    border-left: 20px solid #fff;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+}
+
+.audio-player__control-icon::before {
+    width: 15px;
+    height: 30px;
+    border-right: 6px solid #fff;
+    border-left: 6px solid #fff;
+    -webkit-transform: translateY(-50px);
+    transform: translateY(-50px);
+}
+
+.audio-player__title {
+    position: absolute;
+    color: #fff;
+    background-color: rgba(0,0,0,0.7);
+    width: 100%;
+    bottom: 60%;
+    line-height: 1em;
+    cursor: pointer;
+    -webkit-transition: ease-in-out .5s; /* Safari */
+	transition: ease-in-out .5s;
+}
+
+.spotify-span .grid_link:hover  {
+    background-color: rgba(255,255,255,0.4);
+	-webkit-transition: ease-in-out .5s; /* Safari */
+	transition: ease-in-out .5s;
+}
+
+.spotify-span .grid_link:hover .audio-player__title {
+    background-color: rgba(0,0,0,1);
+	-webkit-transition: ease-in-out .5s; /* Safari */
+	transition: ease-in-out .5s; 
+}
+
+/* YouTube Styling ***********************************************************/
+
+/* optional margin for videos */
+.video {
+	position:relative;
+}
+
+.youtube-player {
+    position: relative;
+    padding-bottom: 56.23%;
+    /* Use 75% for 4:3 videos */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+}
+    
+.youtube-player iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background: transparent;
+}
+    
+.youtube-player img {
+    bottom: 0;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: block;
+    position: absolute;
+    max-width: 100%;
+    width: 100%;
+    margin: auto;
+    border: none;
+    height: auto;
+    cursor: pointer;
+    -webkit-transition: 1.25s all;
+    -moz-transition: 1.25s all;
+    transition: 1.25s all;
+}
+
+.youtube-player:hover img {
+	filter: brightness(60%);
+    -webkit-filter: brightness(60%);
+}
+
+.youtube-player:hover .play, .youtube-player:hover img {
+    transition: ease-in-out .5s;
+    -webkit-transition: ease-in-out .5s; /* Safari */    
+}
+
+/* Instagram Styling ***********************************************************/
+
+.insta-tile {
+    display: none;
+	position: absolute;
+	top: calc(50% - 30px);
+	left: 50%;
+    width: 100%;
+	transform: translate(-50%, -50%);
+	line-height: 50px;
+	padding: 0 6px;
+	color: #fff;
+}
+
+.grid_link:hover .insta-tile {
+    display: block;
+    color: #fff;
+}
+
+.grid_link:hover .insta-tile .insta-cont {
+    display: inline-block;
+	-webkit-transition: ease-in-out .5s; /* Safari */
+	transition: ease-in-out .5s;
+    margin: 0 10px;
+}
+
+
+.grid_link:hover .insta-tile .insta-cont p {
+    display: inline-block;
+}
+
+.grid_link:hover .insta-tile p, .grid_link:hover .insta-tile .insta-cont p {
+	font-family: 'Tajawal', sans-serif;
+	font-size: 1.125em;
+    font-weight: bold;
+    text-align: center;
+    margin: 0 6px;
+}
+
+@media all and (min-width: 320px) and (max-width: 1023px) {
+	.grid_link:hover .insta-tile p {
+		display: none;
+	}
+}
+
+/* Etsy Styling ***********************************************************/
+
+.etsy-title {
+    position: absolute;
+    color: #fff;
+    background-color: rgba(0,0,0,0.7);
+    width: 100%;
+    line-height: 1em;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 50px;
+    padding: 0px;
+    color: #fff;
+    -webkit-transition: ease-in-out .5s; /* Safari */
+	transition: ease-in-out .5s;
+}
+
+.etsy-link:hover  {
+    background-color: rgba(255,255,255,0.4);
+	-webkit-transition: ease-in-out .5s; /* Safari */
+	transition: ease-in-out .5s;
+}
+
+.etsy-link:hover .etsy-title  {
+    background-color: rgba(0,0,0,1);
+	-webkit-transition: ease-in-out .5s; /* Safari */
+	transition: ease-in-out .5s;
+}
