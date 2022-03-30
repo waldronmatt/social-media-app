@@ -28,7 +28,7 @@
                 // if total message count <= count param
                 // add space to word
                 if ($size <= $iterate) {
-                    $cap .= $message[$x] ?? null . ' '; 
+                    $cap .= $message[$x] . ' ' ?? null; 
                 // else if total message count > count param
                 } else if ($size > $iterate) {
                     // if counter equal to count param minus 1
